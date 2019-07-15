@@ -1,0 +1,25 @@
+actor: Tester
+coverage:
+    enabled: false
+    whitelist:
+        include:
+            - ../models
+            - ../modules
+        exclude:
+            - ../vendor/*
+            - ../node_modules/*
+            -  ../runtime/*
+            - ../web/*
+paths:
+    tests: codeception
+    log: codeception/_output
+    data: codeception/_data
+    helpers: codeception/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+    log: true
+modules:
+    config:
+        test_entry_url: http://localhost:8080/index-test.php 

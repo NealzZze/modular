@@ -1,0 +1,20 @@
+{
+  "name": "v-tell.modular",
+  "version": "1.0.0",
+  "description": "Разработка модульного веб-приложения с административной и публичной частями.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.v-tell.com/web/modular"
+  },
+  "author": "Nikita Venikov",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}

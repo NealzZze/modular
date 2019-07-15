@@ -1,0 +1,21 @@
+stages:
+  - test
+  - package
+
+test:
+  stage: test
+  before_script:
+    - composer update
+  script:
+    - php -v
+    - echo 'hello world'
+    - cd tests/
+    - ./../vendor/bin/codecept run unit
+
+package:
+  stage: package
+  script:
+    - cat Version.md | gzip > packaged.gz
+  artifacts:
+    paths:
+      - packaged.gz
