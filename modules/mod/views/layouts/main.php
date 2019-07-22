@@ -52,6 +52,7 @@ $this->beginPage();
         }
     </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="frontend/css/style.css">
 </head>
 
 <body>
@@ -174,7 +175,7 @@ $this->beginPage();
                                     </li>
                                     <li>
                                         <p>
-                                            <i class="material-icons">email</i><span> n.venikov@v-tell.com</span></p>
+                                            <i class="material-icons">email</i><span> <a href="mailto:iam@inealse.ru?subject=From inealse.ru"> iam@inealse.ru</a></span></p>
                                     </li>
                                     <li>
                                         <p>
@@ -194,8 +195,28 @@ $this->beginPage();
         </div>
         </footer>
     </div>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This site may use cookies.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="modal-yes-btn">I agree</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <?php $this->endBody(); ?>
+<script src='frontend/js/script.js'></script>
 </body>
 
 </html>
