@@ -1,0 +1,34 @@
+#chess h1{
+    margin-bottom: 50px;
+    border: 1px solid black;
+}
+#chess #field{
+    width: 320px;
+    height: 320px;
+    box-sizing: content-box;
+    border: 1px solid black;
+}
+
+#chess #field::after{
+    content: "";
+    display: none;
+    clear: both;
+}
+
+#chess .chess-block{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+#chess .bg-black{
+    background: #525252;
+}
+#chess .chess-block.active{
+    background-color: orange;
+    background-size: contain;
+    background-image: url("../images/chess_knight.svg");
+}
+
+#chess .green{
+    background: green;
+}
