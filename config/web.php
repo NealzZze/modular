@@ -62,6 +62,11 @@ return
                     'request-password-reset' => 'mod/user/request-password-reset',
                     'store' => 'store/store/index',
                     'cart' => 'store/store/cart',
+                    'games' => 'mod/games/list',
+                    'life' => 'mod/games/life',
+                    'chess' => 'mod/games/chess',
+                    'flappy' => 'mod/games/flappy',
+                    
                 ]
             ],
             'request' => [
