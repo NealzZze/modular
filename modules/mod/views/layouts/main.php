@@ -184,7 +184,7 @@ $this->beginPage();
                                             </li>
                                             <li>
                                                 <p>
-                                                    <i class="material-icons">phone</i><span> temporarily unavailable</span></p>
+                                                    <i class="material-icons">phone</i><span> <i>temporarily unavailable</i></span></p>
                                             </li>
                                         </ul>
                                     </div>
