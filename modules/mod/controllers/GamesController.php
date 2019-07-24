@@ -3,26 +3,44 @@
 namespace app\modules\mod\controllers;
 
 use yii\web\Controller;
+use yii;
 
 class GamesController extends Controller
 {
-    public function actionList()//список игр
+    public function actionList() //список игр
     {
-        return $this->render('list');
+        if (Yii::$app->user->isGuest) {
+            Yii::$app->session->setFlash('error', 'You should be authorized to see that page');
+            Yii::$app->user->loginRequired();
+        } else {
+            return $this->render('list');
+        }
     }
 
-    public function actionLife()//игра жизнь
+    public function actionLife() //игра жизнь
     {
-        return $this->render('life');
+        if (Yii::$app->user->isGuest) {
+            Yii::$app->user->loginRequired();
+        } else {
+            return $this->render('life');
+        }
     }
 
-    public function actionChess()//ходы конём
+    public function actionChess() //ходы конём
     {
-        return $this->render('chess');
+        if (Yii::$app->user->isGuest) {
+            Yii::$app->user->loginRequired();
+        } else {
+            return $this->render('chess');
+        }
     }
 
-    public function actionFlappy()//flappy bird
+    public function actionFlappy() //flappy bird
     {
-        return $this->render('flappy');
+        if (Yii::$app->user->isGuest) {
+            Yii::$app->user->loginRequired();
+        } else {
+            return $this->render('flappy');
+        }
     }
 }
