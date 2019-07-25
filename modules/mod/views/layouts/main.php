@@ -17,6 +17,9 @@ if (isset($_SESSION['cart'])) {
     }
 }
 $cart_label = Html::tag('span', $cart_count, ['class' => "badge badge-light"]);
+$eye1 = Html::tag('div', Html::tag('div', '', ['class'=>'eyeball1']), ['class'=>'eye1']);
+$eye2 = Html::tag('div', Html::tag('div', '', ['class'=>'eyeball2']), ['class'=>'eye2']);
+$eyes = $eye1.$eye2;
 
 $this->beginPage();
 ?>
@@ -46,6 +49,7 @@ $this->beginPage();
                     ]
                 ]);
                 $items = [
+                    ['label' => $eyes, 'url' => ['/'], 'encode' => false],
                     ['label' => 'Home', 'url' => [Yii::$app->homeUrl]],
                     ['label' => 'Games', 'url' => ['/games']],
                     ['label' => 'Store', 'url' => ['/store']],
@@ -177,6 +181,7 @@ This site may use cookies.
 </div>
 <?php $this->endBody(); ?>
 <script src=frontend/js/script.js></script>
+<script src=frontend/js/eyes.js></script>
 </body>
 </html>
 <?php $this->endPage(); ?>
